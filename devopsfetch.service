@@ -1,0 +1,15 @@
+[Unit]
+Description=DevOpsFetch Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/kali/devopsfetch
+ExecStart=/home/kali/devopsfetch/devopsfetch.sh -p
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
